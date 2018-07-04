@@ -29,7 +29,7 @@ This package is in design phase. Contributions at design level are welcome.
 Details
 -------
 
-Text.
+TBD.
 
 .. code:: python
 
@@ -42,3 +42,12 @@ Requirements
 Python version 3.6 or later.
 
 Python libraries as specified in `<requirements.txt>`_.
+
+
+Similar projects
+================
+
+
+*   https://github.com/lins05/slackbot
+
+*   https://github.com/nkouevda/slack-rtm-bot
