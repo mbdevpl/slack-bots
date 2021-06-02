@@ -3,7 +3,7 @@ import collections.abc
 import logging
 import typing as t
 
-import slackclient
+import slack
 
 _LOG = logging.getLogger(__name__)
 
@@ -27,7 +27,7 @@ def default_handler(records: collections.abc.Sequence) -> t.Optional[bool]:
     return True
 
 
-class SlackBot(slackclient.SlackClient):
+class SlackBot(slack.WebClient):
 
     """Bot for Slack."""
 
@@ -57,7 +57,7 @@ class SlackBot(slackclient.SlackClient):
         self._handler = handler
 
     def query_userid(self, username: str) -> str:
-        users = self.api_call('users.list')['members']
+        users = self.users_list()['members']
         _LOG.debug('users: %s', users)
         user_data = [_ for _ in users if _['name'] == username][0]
         _LOG.debug('user_data: %s', user_data)
@@ -65,9 +65,9 @@ class SlackBot(slackclient.SlackClient):
         return userid
 
     def query_user_channel_ids(self) -> t.List[str]:
-        channels = self.api_call('channels.list')
-        private_channels = self.api_call('groups.list')['groups']
-        dm_channels = self.api_call('im.list')['ims']
+        channels = self.conversations_list(types='public_channel')['channels']
+        private_channels = self.conversations_list(types='private_channel')['channels']
+        dm_channels = self.conversations_list(types='im')['channels']
         _LOG.info(
             '%i public + %i private + %i DM = %i', len(channels), len(private_channels),
             len(dm_channels), len(channels) + len(private_channels) + len(dm_channels))

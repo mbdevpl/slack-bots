@@ -1,7 +1,6 @@
 
 import logging
 
-import slackclient
 import slackeventsapi
 
 from .slack_bot import SlackBot
