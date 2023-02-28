@@ -10,8 +10,8 @@ slack-bots
     :target: https://pypi.org/project/slack-bots
     :alt: package version from PyPI
 
-.. image:: https://img.shields.io/pypi/l/slack-bots.svg
-    :target: https://github.com/mbdevpl/slack-bots/blob/master/NOTICE
+.. image:: https://img.shields.io/github/license/mbdevpl/slack-bots.svg
+    :target: NOTICE
     :alt: license
 
 Collection of simple and reusable Slack bot prototypes.
