@@ -8,7 +8,7 @@ class Package(setup_boilerplate.Package):
 
     name = 'slack-bots'
     description = 'Collection of simple and reusable Slack bot prototypes.'
-    download_url = 'https://github.com/mbdevpl/slack-bots'
+    url = 'https://github.com/mbdevpl/slack-bots'
     classifiers = [
         'Development Status :: 1 - Planning',
         'Environment :: Console',
