@@ -28,7 +28,6 @@ def default_handler(records: collections.abc.Sequence) -> t.Optional[bool]:
 
 
 class SlackBot(slack.WebClient):
-
     """Bot for Slack."""
 
     def __init__(self, username: str, *args, **kwargs):

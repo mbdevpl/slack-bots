@@ -1,11 +1,11 @@
 
-import collections.abc
+# import collections.abc
 import logging
 import time
 import typing as t
-import websocket
 
 import slack
+# import websocket
 
 from .slack_bot import SlackBot
 
@@ -14,7 +14,6 @@ _LOG.setLevel(logging.DEBUG)
 
 
 class SlackRtmBot(SlackBot):
-
     """RTM bot for Slack."""
 
     def __init__(self, *args, **kwargs):
