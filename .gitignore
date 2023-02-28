@@ -1,8 +1,14 @@
+# IDE: Visual Studio Code
+/.vscode
+
 # OS: macOS
 .DS_Store
 
 # OS: Windows
 desktop.ini
+System Volume Information
+Thumbs.db
+Thumbs.db*
 
 # Python
 /build
