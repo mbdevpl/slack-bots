@@ -1,9 +1,9 @@
 """Setup script for slack_bots package."""
 
-import setup_boilerplate
+import boilerplates.setup
 
 
-class Package(setup_boilerplate.Package):
+class Package(boilerplates.setup.Package):
     """Package metadata."""
 
     name = 'slack-bots'
