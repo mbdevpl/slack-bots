@@ -2,5 +2,3 @@ include requirements.txt
 include LICENSE
 include NOTICE
 include ./*/py.typed
-
-include requirements_test.txt
